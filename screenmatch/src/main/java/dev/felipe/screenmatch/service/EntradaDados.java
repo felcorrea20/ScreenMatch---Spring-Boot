@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class EntradaDados {
     Scanner scanner = new Scanner(System.in);
 
-    public Map<Integer, String> mostraMenuPrincipal() {
+    public String mostraMenuPrincipal() {
         String menu = """
                     [1] Episodio
                     [2] Serie
@@ -41,11 +41,8 @@ public class EntradaDados {
         }
 
         endereco = endereco.replace(" ", "+") + "&apikey=eb57dae1";
-        Map<Integer, String> hash = new HashMap<>();
-        hash.put(1, endereco);
-        hash.put(2, String.valueOf(escolha));
 
-        return hash;
+        return endereco;
 
     }
 }
